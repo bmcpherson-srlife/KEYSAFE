@@ -1,0 +1,21 @@
+{
+    "indent": 2,
+    "BlankStructNamesCheck": true,
+    "QualifiedCheck": false,
+    "PrototypeCheck": true,
+    "ForceOptionalParens": true,
+    "NoOCCURS": true,
+    "NoSELECTAll": true,
+    "UppercaseConstants": true,
+    "IncorrectVariableCase": true,
+    "StringLiteralDupe": true,
+    "NoCTDATA": true,
+    "NoSQLJoins": false,
+    "PrettyComments": true,
+    "NoGlobalSubroutines": true,
+    "NoLocalSubroutines": true,
+    "DirectiveCase": "lower",
+    "NoUnreferenced": false,
+    "NoExternalTo": ["qsygetph"],
+    "NoExtProgramVariable": true
+  }

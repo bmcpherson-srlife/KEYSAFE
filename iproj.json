@@ -1,0 +1,16 @@
+{
+  "description": "KEYSAFE",
+  "version": "1.0.0",
+  "repository": "https://github.com/PantalonOrange/KEYSAFE.git",
+  "objlib": "&OBJLIB",
+  "curlib": "&OBJLIB",
+  "preUsrlibl": [
+    "&OBJLIB"
+  ],
+  "includePath": [
+    "qrpgleref"
+  ],
+  "tgtCcsid": "*JOB",
+  "compileCommand": "/QOpenSys/pkgs/bin/makei compile -f {filename}",
+  "buildCommand": "/QOpenSys/pkgs/bin/makei build"
+}

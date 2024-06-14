@@ -1,0 +1,10 @@
+# KEEP IN PROJECT ROOT!
+# Used by Source Orbit to handle unresolved objects not in the project, but are referenced.
+
+# Files that exist outside this project
+
+EXAMPLEFILE.FILE 
+
+# Service programs outside this project
+
+YAJL.SRVPGM

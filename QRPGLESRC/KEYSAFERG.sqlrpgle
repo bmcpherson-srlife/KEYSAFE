@@ -27,13 +27,13 @@
 // This program need database journal for commitment control and db2 crypto services!
 
 
-/INCLUDE KEYSAFE/QRPGLEH,KEYSAFE_H
+/INCLUDE 'qrpgleref/KEYSAFE_H.rpgleinc'
 
 
 //#########################################################################
 DCL-PROC Main;
 
-  /INCLUDE KEYSAFE/QRPGLEH,SQLOPTIONS
+  /INCLUDE 'qrpgleref/SQLOPTIONS.rpgleinc'
 
   Reset This;
   *INLR = TRUE;
