@@ -695,12 +695,12 @@ DCL-PROC searchCatalogue;
 END-PROC;
 
 
-//**************************************************************************
+// **************************************************************************
 DCL-PROC createNewCatalogue;
   DCL-PI *N CHAR(30) END-PI;
 
   DCL-S Success IND INZ(TRUE);
- //-------------------------------------------------------------------------
+  // -------------------------------------------------------------------------
 
   Clear KEYSAFEW3;
   WSDS.WindowShowMessage = FALSE;
@@ -714,7 +714,7 @@ DCL-PROC createNewCatalogue;
     Reset Success;
     WSDS.WindowShowMessage = FALSE;
 
-    If WSDS.Cancel;
+    If (WSDS.Cancel);
       Clear KEYSAFEW3;
       Success = FALSE;
       Leave;
@@ -730,7 +730,7 @@ DCL-PROC createNewCatalogue;
           WSDS.WindowShowMessage = TRUE;
           Iter;
 
-        When checkCatalogueName(W3_Catalogue_Name);
+        When (checkCatalogueName(W3_Catalogue_Name));
           W3_Current_Row = 2;
           W3_Current_Column = 15;
           W3_Message = retrieveMessageText(ERROR_CATALOGUE_EXIST);
@@ -1428,7 +1428,7 @@ DCL-PROC clearMessages;
     pMessageCallStack INT(10) CONST;
   END-PI;
 
-  /INCLUDE KEYSAFE/QRPGLECPY,QMHRMVPM
+  /INCLUDE 'qrpgleref/qmhrmvpm.rpgleinc'
 
   DCL-S Error CHAR(128) INZ;
  //-------------------------------------------------------------------------
@@ -1445,7 +1445,9 @@ DCL-PROC retrieveMessageText;
     pMessageData CHAR(16) CONST OPTIONS(*NOPASS);
   END-PI;
 
-  /INCLUDE KEYSAFE/QRPGLECPY,QMHRTVM
+  qmhrmvpm
+
+  /INCLUDE 'qrpgleref/qmhrtvm.rpgleinc'
 
   DCL-S MessageData CHAR(16) INZ;
   DCL-S Error CHAR(128) INZ;
