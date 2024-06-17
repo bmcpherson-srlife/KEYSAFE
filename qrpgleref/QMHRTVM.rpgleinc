@@ -48,4 +48,4 @@ DCL-PR retrieveMessageData EXTPGM('QMHRTVM');
   ErrorCode CHAR(128);
 END-PR;
 
-/INCLUDE 'qrplgeref/RTVM0100.rpgleinc'
+/INCLUDE './RTVM0100.rpgleinc'

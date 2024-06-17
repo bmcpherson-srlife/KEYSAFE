@@ -259,7 +259,7 @@
 
                   W3CATA        30A  B  2 15COLOR(YLW) ALIAS(W3_CATALOGUE_NAME)
                                             CHECK(LC)
-                  W3CUSR         1A  B  2 65COLOR(YLW) ALIAS(W3_ONLY_CURRENT_USER)
+                  W3CUSR         1A  B  2 65COLOR(YLW) ALIAS(W3_ONLY_CUR_USER)
                                             CHECK(LC)
                   W3DESC        60A  B  3 15COLOR(YLW) ALIAS(W3_DESCRIPTION)
                                             CHECK(LC)

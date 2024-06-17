@@ -3,6 +3,9 @@
 
 # Files that exist outside this project
 
-
+BASE.TABLE
 
 # Service programs outside this project
+
+QMHRTVM.PGM
+QMHRMVPM.PGM

@@ -785,7 +785,7 @@ DCL-PROC createNewCatalogue;
                   VALUES(:W3_Catalogue_Name,
                          KEYSAFE.GENERATE_GUID(),
                          RTRIM(:W3_Description),
-                         CASE WHEN :W3_Only_Current_User = '1'
+                         CASE WHEN :W3_Only_Cur_User = '1'
                               THEN SESSION_USER
                               ELSE CAST(NULL AS CHAR) END,
                          ENCRYPT_TDES('1')) WITH NC;
@@ -1428,7 +1428,7 @@ DCL-PROC clearMessages;
     pMessageCallStack INT(10) CONST;
   END-PI;
 
-  /INCLUDE 'qrpgleref/qmhrmvpm.rpgleinc'
+  /INCLUDE 'qrpgleref/QMHRMVPM.rpgleinc'
 
   DCL-S Error CHAR(128) INZ;
  //-------------------------------------------------------------------------
@@ -1445,9 +1445,7 @@ DCL-PROC retrieveMessageText;
     pMessageData CHAR(16) CONST OPTIONS(*NOPASS);
   END-PI;
 
-  qmhrmvpm
-
-  /INCLUDE 'qrpgleref/qmhrtvm.rpgleinc'
+  /INCLUDE 'qrpgleref/QMHRTVM.rpgleinc'
 
   DCL-S MessageData CHAR(16) INZ;
   DCL-S Error CHAR(128) INZ;
